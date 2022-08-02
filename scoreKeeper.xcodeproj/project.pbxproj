@@ -11,14 +11,18 @@
 		79F82F8228980B9200B89A3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F8128980B9200B89A3D /* ContentView.swift */; };
 		79F82F8428980B9300B89A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F82F8328980B9300B89A3D /* Assets.xcassets */; };
 		79F82F8728980B9300B89A3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F82F8628980B9300B89A3D /* Preview Assets.xcassets */; };
+		79F82F8E2898B55D00B89A3D /* CardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F8D2898B55C00B89A3D /* CardButtonView.swift */; };
+		79F82F902898C14100B89A3D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F8F2898C14100B89A3D /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79F82F7C28980B9200B89A3D /* scoreKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scoreKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F82F7C28980B9200B89A3D /* Tally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreKeeperApp.swift; sourceTree = "<group>"; };
 		79F82F8128980B9200B89A3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79F82F8328980B9300B89A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F82F8628980B9300B89A3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79F82F8D2898B55C00B89A3D /* CardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButtonView.swift; sourceTree = "<group>"; };
+		79F82F8F2898C14100B89A3D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +47,7 @@
 		79F82F7D28980B9200B89A3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79F82F7C28980B9200B89A3D /* scoreKeeper.app */,
+				79F82F7C28980B9200B89A3D /* Tally.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */,
+				79F82F8D2898B55C00B89A3D /* CardButtonView.swift */,
 				79F82F8128980B9200B89A3D /* ContentView.swift */,
+				79F82F8F2898C14100B89A3D /* BlurView.swift */,
 				79F82F8328980B9300B89A3D /* Assets.xcassets */,
 				79F82F8528980B9300B89A3D /* Preview Content */,
 			);
@@ -84,7 +90,7 @@
 			);
 			name = scoreKeeper;
 			productName = scoreKeeper;
-			productReference = 79F82F7C28980B9200B89A3D /* scoreKeeper.app */;
+			productReference = 79F82F7C28980B9200B89A3D /* Tally.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F82F8228980B9200B89A3D /* ContentView.swift in Sources */,
+				79F82F902898C14100B89A3D /* BlurView.swift in Sources */,
+				79F82F8E2898B55D00B89A3D /* CardButtonView.swift in Sources */,
 				79F82F8028980B9200B89A3D /* scoreKeeperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,16 +283,17 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JadenScali.scoreKeeper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tally;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,16 +313,17 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JadenScali.scoreKeeper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tally;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
