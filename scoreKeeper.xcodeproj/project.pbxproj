@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79531FB42898D0AC00F1334A /* DetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79531FB32898D0AC00F1334A /* DetailCardView.swift */; };
 		79F82F8028980B9200B89A3D /* scoreKeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */; };
 		79F82F8228980B9200B89A3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F8128980B9200B89A3D /* ContentView.swift */; };
 		79F82F8428980B9300B89A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F82F8328980B9300B89A3D /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79531FB32898D0AC00F1334A /* DetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardView.swift; sourceTree = "<group>"; };
 		79F82F7C28980B9200B89A3D /* Tally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreKeeperApp.swift; sourceTree = "<group>"; };
 		79F82F8128980B9200B89A3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */,
 				79F82F8D2898B55C00B89A3D /* CardButtonView.swift */,
+				79531FB32898D0AC00F1334A /* DetailCardView.swift */,
 				79F82F8128980B9200B89A3D /* ContentView.swift */,
 				79F82F8F2898C14100B89A3D /* BlurView.swift */,
 				79F82F8328980B9300B89A3D /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				79F82F8228980B9200B89A3D /* ContentView.swift in Sources */,
 				79F82F902898C14100B89A3D /* BlurView.swift in Sources */,
 				79F82F8E2898B55D00B89A3D /* CardButtonView.swift in Sources */,
+				79531FB42898D0AC00F1334A /* DetailCardView.swift in Sources */,
 				79F82F8028980B9200B89A3D /* scoreKeeperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

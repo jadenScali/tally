@@ -11,7 +11,7 @@ import SwiftUI
 struct scoreKeeperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(GlobalEnviorment())
                 .preferredColorScheme(.light)
         }
     }
