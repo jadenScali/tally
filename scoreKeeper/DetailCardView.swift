@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailCardView: View {
-    @EnvironmentObject var env: GlobalEnviorment
+    @EnvironmentObject var env: GlobalEnviornment
     @State var bgImage = Image("softTouchPurple")
     @State var title = Text("title")
     @State var description = Text("des")
@@ -30,6 +30,8 @@ struct DetailCardView: View {
                     )
                     .shadow(color: .black.opacity(0.3), radius: 14, x: 0, y: 10)
                     .onTapGesture {
+                        let haptic = UIImpactFeedbackGenerator(style: .light)
+                        haptic.impactOccurred()
                         withAnimation(.easeInOut(duration: 0.5)) { env.expandCard.toggle() }
                     }
                     .ignoresSafeArea()
@@ -58,11 +60,12 @@ struct DetailCardView: View {
                     .shadow(color: buttonColor.opacity(0.4), radius: 14, x: 0, y: 10)
                     .padding(40)
                     .onTapGesture {
-                        showScoreBoard.toggle()
+                        let haptic = UIImpactFeedbackGenerator(style: .light)
+                        haptic.impactOccurred()
+                        withAnimation(.easeInOut(duration: 0.5)) { showScoreBoard.toggle() }
                     }
             }
             .onAppear {
-                print(namespace)
                 switch cardType {
                 case 0:
                     bgImage = Image("alienWater")
@@ -93,7 +96,7 @@ struct DetailCardView: View {
                 }
             }
         } else {
-            ScoreboardView()
+            ScoreboardView(themeColor: buttonColor, players: 2, bgImage: bgImage, namespace: namespace, cardType: cardType)
         }
     }
 }

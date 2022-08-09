@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardButton: View {
-    @EnvironmentObject var env: GlobalEnviorment
+    @EnvironmentObject var env: GlobalEnviornment
     @State var bgImage = Image("softTouchPurple")
     @State var title = Text("title")
     @State var subtitle = Text("subtitle")
@@ -18,7 +18,8 @@ struct CardButton: View {
         ZStack {
             VStack {
                 title
-                    .font(.largeTitle).bold()
+                    .font(.largeTitle)
+                        .bold()
                     .matchedGeometryEffect(id: "\(cardType)", in: namespace, properties: .position)
                 subtitle
                     .font(.title)
@@ -26,6 +27,8 @@ struct CardButton: View {
             }
             .frame(maxWidth: .infinity, minHeight: 200, maxHeight: 200)
             .onTapGesture {
+                let haptic = UIImpactFeedbackGenerator(style: .light)
+                haptic.impactOccurred()
                 env.currentCardButtonType = cardType
                 withAnimation(.easeInOut(duration: 0.5)) { env.expandCard.toggle() }
             }
@@ -36,9 +39,12 @@ struct CardButton: View {
                         .aspectRatio(contentMode: .fill)
                         .matchedGeometryEffect(id: "Image\(cardType)", in: namespace)
                     BlurView(style: .systemUltraThinMaterialLight)
+                        .matchedGeometryEffect(id: "Blur\(cardType)", in: namespace)
                         .opacity(0.8)
                         .frame(maxWidth: .infinity, minHeight: 200, maxHeight: 200)
                         .onTapGesture {
+                            let haptic = UIImpactFeedbackGenerator(style: .light)
+                            haptic.impactOccurred()
                             env.currentCardButtonType = cardType
                             withAnimation(.easeInOut(duration: 0.5)) { env.expandCard.toggle() }
                         }
@@ -52,7 +58,6 @@ struct CardButton: View {
             .padding(32)
         }
         .onAppear {
-            print(namespace)
             switch cardType {
             case 0:
                 bgImage = Image("alienWater")

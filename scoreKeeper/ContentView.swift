@@ -7,14 +7,8 @@
 
 import SwiftUI
 
-//env object
-class GlobalEnviorment: ObservableObject {
-    @Published var expandCard = false
-    @Published var currentCardButtonType = 0
-}
-
 struct ContentView: View {
-    @EnvironmentObject var env: GlobalEnviorment
+    @EnvironmentObject var env: GlobalEnviornment
     @Namespace var namespace
     var body: some View {
         if !env.expandCard {
@@ -22,19 +16,24 @@ struct ContentView: View {
                 VStack(spacing: 5) {
                     Spacer()
                     Text("T")
-                        .font(.system(size: 60)).bold()
+                        .font(.system(size: 60))
+                            .bold()
                         .foregroundColor(Color("tropYellow"))
                     + Text("a")
-                        .font(.system(size: 60)).bold()
+                        .font(.system(size: 60))
+                            .bold()
                         .foregroundColor(Color("tropOrange"))
                     + Text("l")
-                        .font(.system(size: 60)).bold()
+                        .font(.system(size: 60))
+                            .bold()
                         .foregroundColor(Color("tropPink"))
                     + Text("l")
-                        .font(.system(size: 60)).bold()
+                        .font(.system(size: 60))
+                            .bold()
                         .foregroundColor(Color("tropPurple"))
                     + Text("y")
-                        .font(.system(size: 60)).bold()
+                        .font(.system(size: 60))
+                            .bold()
                         .foregroundColor(Color("tropBlue"))
                     
                     CardButton(namespace: namespace, cardType: 0)
@@ -51,7 +50,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(GlobalEnviorment())
+        ContentView().environmentObject(GlobalEnviornment())
             .previewDevice("iPhone 13")
     }
 }
