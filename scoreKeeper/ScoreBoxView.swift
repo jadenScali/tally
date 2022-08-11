@@ -79,6 +79,8 @@ struct ScoreBoxView: View {
                                 .frame(width: 45, height: 45)
                                 .opacity(color == selectedColor ? 1.0 : 0.3)
                                 .onTapGesture {
+                                    let haptic = UIImpactFeedbackGenerator(style: .light)
+                                    haptic.impactOccurred()
                                     selectedColor = color
                                     env.boxColors[boxNum - 1] = selectedColor
                                 }

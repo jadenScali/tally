@@ -12,6 +12,8 @@
 		7981747D289DD10E00F0C13A /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981747C289DD10D00F0C13A /* ScoreboardView.swift */; };
 		7981747F289DD61A00F0C13A /* ScoreBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981747E289DD61A00F0C13A /* ScoreBoxView.swift */; };
 		799DE24728A094F400B69F59 /* GlobalEnviornment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799DE24628A094F400B69F59 /* GlobalEnviornment.swift */; };
+		79B1BC7028A40AC400D534CC /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BC6F28A40AC400D534CC /* OptionsView.swift */; };
+		79B1BC7228A4366400D534CC /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BC7128A4366400D534CC /* PickerView.swift */; };
 		79F82F8028980B9200B89A3D /* scoreKeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */; };
 		79F82F8228980B9200B89A3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F82F8128980B9200B89A3D /* ContentView.swift */; };
 		79F82F8428980B9300B89A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F82F8328980B9300B89A3D /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		7981747C289DD10D00F0C13A /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		7981747E289DD61A00F0C13A /* ScoreBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoxView.swift; sourceTree = "<group>"; };
 		799DE24628A094F400B69F59 /* GlobalEnviornment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnviornment.swift; sourceTree = "<group>"; };
+		79B1BC6F28A40AC400D534CC /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		79B1BC7128A4366400D534CC /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		79F82F7C28980B9200B89A3D /* Tally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F82F7F28980B9200B89A3D /* scoreKeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreKeeperApp.swift; sourceTree = "<group>"; };
 		79F82F8128980B9200B89A3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				79531FB32898D0AC00F1334A /* DetailCardView.swift */,
 				79F82F8128980B9200B89A3D /* ContentView.swift */,
 				7981747C289DD10D00F0C13A /* ScoreboardView.swift */,
+				79B1BC6F28A40AC400D534CC /* OptionsView.swift */,
+				79B1BC7128A4366400D534CC /* PickerView.swift */,
 				7981747E289DD61A00F0C13A /* ScoreBoxView.swift */,
 				79F82F8F2898C14100B89A3D /* BlurView.swift */,
 				79F82F8328980B9300B89A3D /* Assets.xcassets */,
@@ -161,7 +167,9 @@
 				799DE24728A094F400B69F59 /* GlobalEnviornment.swift in Sources */,
 				79F82F8228980B9200B89A3D /* ContentView.swift in Sources */,
 				793A16C928A0B97F00A53BA8 /* DynamicStack.swift in Sources */,
+				79B1BC7028A40AC400D534CC /* OptionsView.swift in Sources */,
 				7981747F289DD61A00F0C13A /* ScoreBoxView.swift in Sources */,
+				79B1BC7228A4366400D534CC /* PickerView.swift in Sources */,
 				79F82F902898C14100B89A3D /* BlurView.swift in Sources */,
 				79F82F8E2898B55D00B89A3D /* CardButtonView.swift in Sources */,
 				79531FB42898D0AC00F1334A /* DetailCardView.swift in Sources */,

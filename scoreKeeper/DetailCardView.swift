@@ -14,8 +14,9 @@ struct DetailCardView: View {
     @State var description = Text("des")
     @State var buttonColor = Color("tropYellow")
     @State var showScoreBoard = false
+    @State var needsTimer = false
     let namespace: Namespace.ID
-    var cardType: Int
+    let cardType: Int
     var body: some View {
         if !showScoreBoard {
             VStack {
@@ -72,31 +73,35 @@ struct DetailCardView: View {
                     title = Text("One Time Score")
                     buttonColor = Color("tropYellow")
                     description = Text("This mode is perfect for when you want to keep track of a single game. After the session this score will not save.")
+                    needsTimer = false
                     break
                 case 1:
                     bgImage = Image("colorfulMicro")
                     title = Text("Long Term Score")
                     buttonColor = Color("tropOrange")
                     description = Text("This mode should be used when you want to keep track of a long term game with a rival. Each scoreboard will never reset.")
+                    needsTimer = false
                     break
                 case 2:
                     bgImage = Image("magicalGlass")
                     title = Text("Timed Score")
                     buttonColor = Color("tropPink")
                     description = Text("This mode is for when you need a scoreboard with a timer.")
+                    needsTimer = true
                     break
                 case 3:
                     bgImage = Image("softTouchPurple")
                     title = Text("Feedback")
                     buttonColor = Color("tropPurple")
                     description = Text("Feedback is always needed. Please feel free to send any feedback positive or negative.")
+                    needsTimer = false
                     break
                 default:
                     print("ERROR: cardtype out of predicted range")
                 }
             }
         } else {
-            ScoreboardView(themeColor: buttonColor, players: 2, bgImage: bgImage, namespace: namespace, cardType: cardType)
+            ScoreboardView(themeColor: buttonColor, players: 2, bgImage: bgImage, namespace: namespace, cardType: cardType, needsTimer: needsTimer)
         }
     }
 }
