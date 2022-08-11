@@ -41,6 +41,18 @@ struct ScoreboardView: View {
             }
             i += 1
         }
+        if hrs == 0 {
+            formattedTime = String(formattedTime.suffix(5))
+            if mins < 10 {
+                formattedTime = String(formattedTime.suffix(4))
+                if mins == 0 {
+                    formattedTime = String(formattedTime.suffix(2))
+                    if secs < 10 {
+                        formattedTime = String(formattedTime.suffix(1))
+                    }
+                }
+            }
+        }
         return formattedTime
     }
     var body: some View {
@@ -79,15 +91,15 @@ struct ScoreboardView: View {
                         }
                 }
                 DynamicStack {
-                    ScoreBoxView(selectedColor: themeColor, boxNum: 1)
-                    ScoreBoxView(selectedColor: Color("tropBlue"), boxNum: 2)
+                    ScoreBoxView(selectedColor: themeColor, boxNum: 1, namespace: namespace)
+                    ScoreBoxView(selectedColor: Color("tropBlue"), boxNum: 2, namespace: namespace)
                 }
                 .onAppear {
                     let txt = formatTimer()
                     timerTxt = Text(txt)
                 }
             } else {
-                OptionsView(themeColor: themeColor, needsDuration: needsTimer)
+                OptionsView(themeColor: themeColor, needsDuration: needsTimer, namespace: namespace)
             }
             
             if !env.isEditingSomwhere {
@@ -127,7 +139,7 @@ struct ScoreboardView: View {
                             if timeRemaining == 0 && needsTimer {
                                 env.optionsErrorTxt = Text("Please enter a time greater than 0")
                             } else {
-                                selectedOptions = true
+                                withAnimation(.easeInOut(duration: 0.5)) { selectedOptions.toggle() }
                                 bottomButtonTxt = Text("Done")
                             }
                         }

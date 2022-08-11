@@ -11,6 +11,7 @@ struct OptionsView: View {
     @EnvironmentObject var env: GlobalEnviornment
     let themeColor: Color
     let needsDuration: Bool
+    let namespace: Namespace.ID
     var body: some View {
         VStack {
             ScrollView {
@@ -39,8 +40,10 @@ struct OptionsView: View {
                         .padding()
                         .foregroundColor(.black)
                         .background()
+                            .matchedGeometryEffect(id: "OptionsbgMask1", in: namespace)
                         .mask(
                             RoundedRectangle.init(cornerRadius: 30, style: .continuous)
+                                .matchedGeometryEffect(id: "OptionsMask1", in: namespace)
                         )
                         .shadow(color: .black.opacity(0.3), radius: 14, x: 0, y: 10)
                 }
@@ -63,9 +66,11 @@ struct OptionsView: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .background(.white)
+        .background()
+            .matchedGeometryEffect(id: "OptionsbgMask2", in: namespace)
         .mask(
             RoundedRectangle.init(cornerRadius: 30, style: .continuous)
+                .matchedGeometryEffect(id: "OptionsMask2", in: namespace)
         )
         .shadow(color: .black.opacity(0.3), radius: 14, x: 0, y: 10)
         .padding()
@@ -73,7 +78,8 @@ struct OptionsView: View {
 }
 
 struct OptionsView_Previews: PreviewProvider {
+    @Namespace static var namespace
     static var previews: some View {
-        OptionsView(themeColor: Color("tropPink"), needsDuration: true).environmentObject(GlobalEnviornment())
+        OptionsView(themeColor: Color("tropPink"), needsDuration: true, namespace: namespace).environmentObject(GlobalEnviornment())
     }
 }

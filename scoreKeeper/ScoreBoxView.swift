@@ -13,6 +13,7 @@ struct ScoreBoxView: View {
     @State var name: String = ""
     @State var selectedColor: Color
     let boxNum: Int
+    let namespace: Namespace.ID
     private let colors: [Color] = [
         Color("tropYellow"),
         Color("tropOrange"),
@@ -90,9 +91,11 @@ struct ScoreBoxView: View {
                 }
             }
         }
-        .background(.white)
+        .background()
+            .matchedGeometryEffect(id: "OptionsbgMask\(boxNum)", in: namespace)
         .mask(
             RoundedRectangle.init(cornerRadius: 30, style: .continuous)
+                .matchedGeometryEffect(id: "OptionsMask\(boxNum)", in: namespace)
         )
         .shadow(color: .black.opacity(0.3), radius: 14, x: 0, y: 10)
         .padding()
@@ -118,7 +121,8 @@ struct ScoreBoxView: View {
 }
 
 struct ScoreBox_Previews: PreviewProvider {
+    @Namespace static var namespace
     static var previews: some View {
-        ScoreBoxView(name: "Player", selectedColor: Color("tropYellow"), boxNum: 1).environmentObject(GlobalEnviornment())
+        ScoreBoxView(name: "Player", selectedColor: Color("tropYellow"), boxNum: 1, namespace: namespace).environmentObject(GlobalEnviornment())
     }
 }
